@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const chalk = require("chalk");
 const opn = require("opn");
 const pjson = require("./package.json");
