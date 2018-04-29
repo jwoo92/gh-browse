@@ -1,0 +1,28 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-export-extensions",
+    "syntax-dynamic-import",
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
+  ],
+  "env": {
+    "dev": {
+      "presets": []
+    },
+    "production": {
+      "presets": ["stage-3"],
+      "plugins": [
+        "closure-elimination",
+        "babel-plugin-loop-optimizer",
+        "transform-remove-console"
+      ]
+    }
+  }
+}
