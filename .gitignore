@@ -32,8 +32,8 @@ yarn-error.log*
 .env.*
 
 #Build generated
-dist/
 build/
+dist/
 lib/
 
 # Serverless generated files

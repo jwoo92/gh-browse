@@ -1,8 +1,8 @@
 {
   "name": "gh-browse",
-  "description": "",
+  "description": "A lazy man's way to open up a search query on GitHub using the CLI",
   "version": "0.1.1",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "bin": {
     "gh-browse": ".dist/index.js"
@@ -14,7 +14,8 @@
     "format": "prettier --write src -q src/**/*.js",
     "lint": "eslint src --ext .js,.jsx",
     "fix": "eslint src --ext .js,.jsx --fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepublish": "yarn fix && yarn format && yarn build"
   },
   "repository": {
     "type": "git",
@@ -54,12 +55,13 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-promise": "^3.7.0",
+    "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
     "nodemon": "^1.17.3",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2"
   },
   "lint-staged": {
-    "app/**/*.js": ["yarn fix", "yarn format", "yarn build", "git add"]
+    "src/**/*.js": ["yarn fix", "yarn format", "yarn build", "git add"]
   }
 }
