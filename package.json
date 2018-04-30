@@ -1,7 +1,7 @@
 {
   "name": "gh-browse",
   "description": "A lazy man's way to open up a search query on GitHub using the CLI",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/index.js",
   "license": "MIT",
   "bin": {
