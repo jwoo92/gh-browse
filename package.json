@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "license": "MIT",
   "bin": {
-    "gh-browse": ".dist/index.js"
+    "gh-browse": "dist/index.js"
   },
   "scripts": {
     "start": "node dist/index.js",
