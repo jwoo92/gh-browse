@@ -11,8 +11,16 @@ Prerequisites: [Node.js](https://nodejs.org/en/) (>=8.11.1), npm version 3+.
 
 ### Global Installation
 
+#### yarn
+
 ```
-npm install -g gh-browse
+yarn global add gh-browse
+```
+
+#### npm
+
+```
+npm i -g gh-browse
 ```
 
 ## Usage

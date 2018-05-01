@@ -1,7 +1,7 @@
 {
   "name": "gh-browse",
   "description": "A lazy man's way to open up a search query on GitHub using the CLI",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
   "bin": {
@@ -69,7 +69,6 @@
   "lint-staged": {
     "src/**/*.js": [
       "yarn fix",
-      "yarn format",
       "yarn build",
       "git add"
     ]
