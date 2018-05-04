@@ -112,8 +112,17 @@ const setFlags = () => {
 }
 
 const setFilterTypes = () => {
-  const type = state.flags.filter((k) => k.indexOf('type=') !== -1)[0] || null
-  return type ? (state.url += `&${type.slice(2)}`) : false
+  const type =
+    state.flags.map(
+      (k) =>
+        k.indexOf('type=') === -1
+          ? false
+          : state.types.filter(
+              (j) => j.indexOf(k.match(/type=[^\s]+/g)[0].split('=')[1]) !== -1,
+            )[0],
+    )[0] || null
+
+  return type ? (state.url += `&type=${type}`) : false
 }
 
 // ==================================================
